@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="offer_controller" class="AppBundle\Controller\OfferController" >
+            <argument type="service" id="templating"/>
+            <argument type="service" id="room_finder"/>
+            <argument type="service" id="offer_manager"/>
+        </service>
+
+        <service id="core_manager" class="AppBundle\Manager\CoreManager" >
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+        </service>
+
+        <service id="room_finder" class="AppBundle\Manager\RoomManager" parent="core_manager">
+
+        </service>
+
+        <service id="offer_manager" class="AppBundle\Manager\OfferManager" parent="core_manager">
+
+        </service>
+
+    </services>
+</container>

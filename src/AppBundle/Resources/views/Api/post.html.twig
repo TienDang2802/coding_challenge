@@ -1,0 +1,8 @@
+<h1>Offer date: {{ offer_date | date }}</h1>
+<ul>
+    {% for room in offer_rooms %}
+    <li>
+        {{ room }}
+    </li>
+    {% endfor %}
+</ul>

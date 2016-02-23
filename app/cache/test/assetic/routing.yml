@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /Work/Srv/8bit/com_test/sym_test/app/config/routing_dev.yml

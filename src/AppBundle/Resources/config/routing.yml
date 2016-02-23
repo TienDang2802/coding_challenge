@@ -1,0 +1,10 @@
+api_add_offer:
+    path:      /api/offers
+    defaults:  { _controller: AppBundle:Api:post }
+    methods:  [POST]
+
+api_remove_offer:
+    path:      /api/offers/{id}
+    defaults:  { _controller: AppBundle:Api:delete }
+    methods:  [DELETE]
+
